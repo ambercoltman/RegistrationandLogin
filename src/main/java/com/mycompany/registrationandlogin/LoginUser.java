@@ -10,15 +10,45 @@ package com.mycompany.registrationandlogin;
  */
 class LoginUser {
      public static void LoginUser() {
-     System.out.println("This is a method");
      }
      public String firstName;
      public String lastName;
      public String username;
      public String password;
      
-     public boolean  checkUserName() {
-             
+     public void setFirstName( String firstname ){
+        firstName = firstname;
+    }
+     
+     public void setLastName( String lastname ){
+        firstName = lastname;
+    }
+     
+     public void setusername( String username ){
+        firstName = username;
+    }
+     
+     public void setpassword( String password ){
+        firstName = password;
+    }
+
+     public String getFirstName(){
+         return firstName;
+     }
+     
+     public String getLastName(){
+         return lastName;
+     }
+     
+     public String getuserame(){
+         return username;
+     }
+     
+     public String getpassword(){
+         return password;
+     }
+     
+     public static boolean checkUserName(String username) {    
        if(username.length() <= 5 && username.contains("_")) 
        {
            return true;
@@ -27,6 +57,7 @@ class LoginUser {
        {
         return false;   
        }
+       }
        
 }
-}
+
