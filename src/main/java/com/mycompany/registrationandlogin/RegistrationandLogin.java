@@ -25,16 +25,16 @@ public class RegistrationandLogin {
      
       System.out.println("Enter your username:");
       in.nextLine();
+           
+      System.out.println("Enter your password:");
+      in.nextLine();
+     
       user.checkUserName("true");
       System.out.println("Username successfully captured.");
       in.nextLine();
       user.checkUserName("false");
       System.out.println("Username is not correctly formatted, please ensure that your username contains an undercore and is no more than 5 character in length.");
-      in.nextLine();        
-      System.out.println("Enter your password:");
-      in.nextLine();
-     
-      
+      in.nextLine();   
     }
 }
            
