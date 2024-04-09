@@ -9,7 +9,7 @@ package com.mycompany.registrationandlogin;
  * @author User
  */
 class LoginUser {
-     public static void LoginUser() {
+     public void LoginUser() {
      }
      public String firstName;
      public String lastName;
@@ -48,16 +48,26 @@ class LoginUser {
          return password;
      }
      
-     public static boolean checkUserName(String username) {    
-       if(username.length() <= 5 && username.contains("_")) 
-       {
+     public boolean checkUserName(String username) {    
+       if(username.length() <= 5 && username.contains("_")){
+           return false;
+       }else{
            return true;
        }
-          else
-       {
-        return false;   
-       }
-       }
        
-}
+     }
+     
+     public boolean checkPasswordComplexity(String password) {
+         return password.length() == 8 && password.matches("ABCDEFGHIJKLMNOPQRSTUVWXYZ") && password.matches("123456789") && password.matches("!@#$*.,_-");
+     }
+     
+         
+}    
+
+         
+     
+         
+     
+       
+
 
