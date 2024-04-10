@@ -16,53 +16,44 @@ class LoginUser {
      public String username;
      public String password;
      
-     public void setFirstName( String firstname ){
-        firstName = firstname;
-    }
-     
-     public void setLastName( String lastname ){
-        firstName = lastname;
-    }
-     
-     public void setusername( String username ){
-        firstName = username;
-    }
-     
-     public void setpassword( String password ){
-        firstName = password;
-    }
-
-     public String getFirstName(){
-         return firstName;
-     }
-     
-     public String getLastName(){
-         return lastName;
-     }
-     
-     public String getuserame(){
-         return username;
-     }
-     
-     public String getpassword(){
-         return password;
-     }
-     
-     public boolean checkUserName(String username) {    
+     public boolean checkUserName(String username) {
+         
        if(username.length() <= 5 && username.contains("_")){
-           return false;
+       System.out.println("Username successfully captured.");
        }else{
-           return true;
-       }
-       
+       System.out.println("Username is not correctly formatted, please ensure that your username contains an undercore and is no more than 5 character in length.");
+       } 
+         return false;
      }
      
      public boolean checkPasswordComplexity(String password) {
-         return password.length() == 8 && password.matches("ABCDEFGHIJKLMNOPQRSTUVWXYZ") && password.matches("123456789") && password.matches("!@#$*.,_-");
-     }
-     
          
-}    
+        if(password.length() == 8 && password.contains("ABCDEFGHIJKLMNOPQRSTUVWXYZ") 
+             && password.contains("123456789") && password.contains("!@#$*.,_-")){
+        System.out.println("Password successfully captured.");
+        }else{
+        System.out.println("Password is not correctly formatted, please ensure that the"
+            + "password contains at least 8 characters, a capital letter, a number and"
+            + " a special character");
+        }
+          return false;
+        
+     }     
+
+        
+}
+        
+     
+     
+
+     
+
+
+
+ 
+     
+
+   
 
          
      
