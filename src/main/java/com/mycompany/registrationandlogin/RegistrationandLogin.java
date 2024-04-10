@@ -27,6 +27,14 @@ public class RegistrationandLogin {
       System.out.println("Enter your password:");
       user.checkPasswordComplexity(in.nextLine());
      
+      System.out.println("Register User:");
+      in.nextLine();
+       
+      System.out.println("Login User:");
+      in.nextLine();
+       
+      System.out.println("Login Status:");
+      in.nextLine();
        
     }
 }

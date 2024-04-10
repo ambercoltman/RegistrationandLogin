@@ -15,6 +15,7 @@ class LoginUser {
      public String lastName;
      public String username;
      public String password;
+     public String registerUser;
      
      public boolean checkUserName(String username) {
          
@@ -39,6 +40,19 @@ class LoginUser {
           return false;
         
      }     
+     
+     public String registerUser(String username, String password){
+     
+         if(!checkUserName(username)){
+         System.out.println("The username is incorrectly formatted.");
+     }
+         if(!checkPasswordComplexity(password)) {
+         System.out.println("The password does not meet the complexity requirements.");
+         
+        }
+         return "The two above conditions have been met and the user has been registered successfully.";
+     
+     }
 
         
 }
