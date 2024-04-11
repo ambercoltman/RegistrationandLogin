@@ -16,6 +16,7 @@ class LoginUser {
      public String username;
      public String password;
      public String registerUser;
+     public String returnLoginStatus;
      
      public boolean checkUserName(String username) {
          
@@ -28,16 +29,20 @@ class LoginUser {
      }
      
      public boolean checkPasswordComplexity(String password) {
-         
-        if(password.length() == 8 && password.contains("ABCDEFGHIJKLMNOPQRSTUVWXYZ") 
-             && password.contains("123456789") && password.contains("!@#$*.,_-")){
-        System.out.println("Password successfully captured.");
-        }else{
-        System.out.println("Password is not correctly formatted, please ensure that the"
+       String length = "8";  
+       String oneDigit = "(?=.*[0-9)";
+       String lowerCase = "(?=.*[a-z])";
+       String upperCase = "(?=.*[A-Z)";
+       String specialCharacter = "(?=.*[@#$%^&*!.)";
+       
+       if(password.contains(length) && password.contains(oneDigit) && password.contains(lowerCase) && password.contains(upperCase) && password.contains(specialCharacter)){
+         System.out.println("Password successfully captured.");
+         }else{
+         System.out.println("Password is not correctly formatted, please ensure that the"
             + "password contains at least 8 characters, a capital letter, a number and"
             + " a special character");
         }
-          return false;
+         return false;
         
      }     
      
@@ -53,6 +58,26 @@ class LoginUser {
          return "The two above conditions have been met and the user has been registered successfully.";
      
      }
+     
+     public String returnLoginStatus(boolean Login){
+      if (Login){
+          System.out.println("A succesful login");
+      }else{
+          System.out.println("A failed login");
+      }
+         return null;
+      
+     }
+     
+     public String succesfulLogin(String returnLoginStatus){
+         if(returnLoginStatus){
+             System.out.println("Welcome" +firstName + lastName + "it is great to see you again.");
+         }else{
+             System.out.println("Username or password incorrect please try again.");
+         }
+         return null;
+     }
+     
 
         
 }
