@@ -2,21 +2,21 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.mycompany.registrationandlogin;
+package com.mycompany.registrationandLogin;
 
 /**
  *
  * @author User
  */
-class LoginUser {
+     public class LoginUser {
      public void LoginUser() {
      }
      public String firstName;
      public String lastName;
      public String username;
      public String password;
-     public String registerUser;
-     public String returnLoginStatus;
+     public String username2;
+     public String password2;
      
      public boolean checkUserName(String username) {
          
@@ -59,27 +59,27 @@ class LoginUser {
      
      }
      
-     public String returnLoginStatus(boolean Login){
-      if (Login){
-          System.out.println("A succesful login");
+     public boolean loginUser(){
+       
+      if(username == username2 && password == password2){
+          System.out.println("Welcome" + firstName + lastName + "It is great to see you again.");
       }else{
-          System.out.println("A failed login");
+          System.out.println("Username or password incorrect, pease try again.");
       }
-         return null;
-      
+         return false;
      }
-     
-     public String succesfulLogin(String returnLoginStatus){
-         if(returnLoginStatus){
-             System.out.println("Welcome" +firstName + lastName + "it is great to see you again.");
-         }else{
-             System.out.println("Username or password incorrect please try again.");
+      
+     public String returnLoginStatus(){
+        
+         if(username == username2 && password == password2){
+             System.out.println("A successful login");
+     }else{
+             System.out.println("A failed login");
          }
          return null;
      }
-     
-
-        
+             
+                              
 }
         
      
