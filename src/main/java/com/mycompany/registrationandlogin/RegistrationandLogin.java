@@ -12,7 +12,7 @@ import java.util.Scanner;
 public class RegistrationandLogin {
 
     public static void main(String[] args) {
-      LoginUser user = new LoginUser;   
+      LoginUser user = new LoginUser();   
       Scanner in = new Scanner(System.in);
       
       System.out.println("Enter your first name:");
@@ -27,8 +27,8 @@ public class RegistrationandLogin {
       System.out.println("Enter your password:");
       user.checkPasswordComplexity(in.nextLine());
      
-      System.out.println("Register User:");
-      user.registerUser(in.nextLine());
+      System.out.println("Register User");
+      in.nextLine();
        
       System.out.println("Login");
       System.out.println("Please enter your username again:");
@@ -36,8 +36,11 @@ public class RegistrationandLogin {
       System.out.println("Please enter your password again:");
       in.nextLine();
       
+      System.out.println("Message");
+      user.loginUser1();
+              
       System.out.println("Login Status:");
-      in.nextLine();
+      user.returnLoginStatus();
        
     }
 }
