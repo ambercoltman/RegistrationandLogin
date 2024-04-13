@@ -29,7 +29,7 @@ package com.mycompany.registrationandlogin;
      }
      
      public boolean checkPasswordComplexity(String password) {
-       String length = "8";  
+       String length = ">=8";  
        String oneDigit = "(?=.*[0-9)";
        String lowerCase = "(?=.*[a-z])";
        String upperCase = "(?=.*[A-Z)";
@@ -38,15 +38,13 @@ package com.mycompany.registrationandlogin;
        if(password.contains(length) && password.contains(oneDigit) && password.contains(lowerCase) && password.contains(upperCase) && password.contains(specialCharacter)){
          System.out.println("Password successfully captured.");
          }else{
-         System.out.println("Password is not correctly formatted, please ensure that the"
-            + "password contains at least 8 characters, a capital letter, a number and"
-            + " a special character");
+         System.out.println("Password is not correctly formatted, please ensure that the  password contains at least 8 characters, a capital letter, a number and a special character.");
         }
          return false;
         
      }     
      
-     public String registerUser(String username, String password){
+     public String registerUser(){
      
          if(!checkUserName(username)){
          System.out.println("The username is incorrectly formatted.");
