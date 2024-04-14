@@ -19,8 +19,8 @@ package com.mycompany.registrationandlogin;
      public String password2;
      
      public boolean checkUserName(String username) {
-       String length = "<=5";  
-       if(username.contains(length) && username.contains("_")){
+         
+       if(username.length() <= 5 && username.contains("_")){
            
        System.out.println("Username successfully captured.");
        }else{
@@ -43,21 +43,6 @@ package com.mycompany.registrationandlogin;
         }
          return false;  
      }     
-     
-     public String registerUser(){
-     
-       if(!checkUserName(username)){
-          System.out.println("The username is incorrectly formatted.");
-         }
-       if(!checkPasswordComplexity(password)) {
-          System.out.println("The password does not meet the complexity requirements.");
-         
-         }else{ 
-          System.out.println("The two above conditions have been met and the user has been registered successfully.");
-       }
-         return null;
-     
-      }
      
      public boolean loginUser1(){
        
