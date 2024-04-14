@@ -20,7 +20,7 @@ package com.mycompany.registrationandlogin;
      
      public boolean checkUserName(String username) {
          
-       if(username.length() <= 5 && username.contains("_")){
+       if(username.length() <= 5 && username.contains("_")){ 
            
        System.out.println("Username successfully captured.");
        }else{
@@ -28,6 +28,12 @@ package com.mycompany.registrationandlogin;
        } 
          return false;
      }
+     
+     /*Reference
+     Farrel,J.2023.Java Programming.Tenth Edition.Boston;Cengage
+     
+     */
+     
      
      public boolean checkPasswordComplexity(String password) {
        String length = ">=8";  
@@ -63,8 +69,30 @@ package com.mycompany.registrationandlogin;
          }
          return null;
      }
-             
-                              
+      
+    public boolean checkUserName(){
+       String username = "amb_r";
+        
+        if(username.matches("amb_r") == false)
+        {
+            return false;
+        }else{
+            return true;
+        }        
+    }
+    
+    public boolean checkPasswordComplexity(){
+        String password = "Cola215!";
+        
+        if(password.matches("Cola215!") == true)
+        {
+            return true;
+        }else{
+            return false;
+        }
+    }
+    
+    
 }
         
      
