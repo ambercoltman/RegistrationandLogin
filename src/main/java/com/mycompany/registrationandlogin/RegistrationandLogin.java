@@ -12,8 +12,17 @@ import java.util.Scanner;
 public class RegistrationandLogin {
 
     public static void main(String[] args) {
-      LoginUser user = new LoginUser();   
+     /*Reference  Creating and USing Constructors
+       Farrel(2023) states that to call a class you type to class name and assign it an object statement, 
+       for example ' Employee chauffeur = new Employee();'
+     */
+        LoginUser user = new LoginUser();   
       Scanner in = new Scanner(System.in);
+      
+      /*Reference Scanner class methods
+      Farrel(2023:58) states that, "The nextLine() method is used with inputDevice to retrieve a line of text from the
+      keyboard and store it in the name variable."
+      */
       
       System.out.println("Enter your first name:");
       in.nextLine();
@@ -26,10 +35,7 @@ public class RegistrationandLogin {
               
       System.out.println("Enter your password:");
       user.checkPasswordComplexity(in.nextLine());
-     
-      System.out.println("Register User");
-      user.registerUser();
-       
+    
       System.out.println("Login");
       System.out.println("Please enter your username again:");
       in.nextLine();
@@ -43,6 +49,10 @@ public class RegistrationandLogin {
       user.returnLoginStatus();
        
     }
+    
+    /*Referencing 
+    Farrel,J.2023.Java Programming Tenth Edition.Boston: Cengage
+    */
 }
            
      

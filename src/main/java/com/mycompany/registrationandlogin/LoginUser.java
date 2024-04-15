@@ -18,9 +18,17 @@ package com.mycompany.registrationandlogin;
      public String username2;
      public String password2;
      
+     /*Reference comparing objects
+     Farrel(2023) states that to compare primitive data types such as'int' and 'double' , you should use the standard relational operators (==, <, >, <=, >=, and !=)
+     Farrel(2023) indicates that to create a compound boolean expression thats true when both of the operators are true you use the logical AND operator(&&), you use 
+     this between two boolean expressions.
+     Farrek(2023) states that with the if...else statement it performs an action when the boolean expression is true and a different action when the boolean expression
+     is false.
+     */
+     
      public boolean checkUserName(String username) {
          
-       if(username.length() <= 5 && username.contains("_")){ 
+       if(username.length() <= 5 && username.contains("_")){  // checking to see if the username is smaller or equal to 5 characters in length and that there is an underscore 
            
        System.out.println("Username successfully captured.");
        }else{
@@ -28,13 +36,13 @@ package com.mycompany.registrationandlogin;
        } 
          return false;
      }
-     
-     /*Reference
-     Farrel,J.2023.Java Programming.Tenth Edition.Boston;Cengage
-     
+    
+     /*
+     Reference Password Complexity
+     ^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@#$%^&+=]).{8,}$
+     The symbol '^' shows the strings beginning and the '$' shows the end of thr string. The symbols at the start of each code '?=.*' are tools
+     in java that allows you to search and match strings.
      */
-     
-     
      public boolean checkPasswordComplexity(String password) {
        String length = ">=8";  
        String oneDigit = "(?=.*[0-9)";
@@ -48,17 +56,27 @@ package com.mycompany.registrationandlogin;
          System.out.println("Password successfully captured.");
         }
          return false;  
-     }     
+     } 
+     
+     /*Reference equivalence
+     Farrel(2023) indicates that the double equal to sign is used to show the equivalence that the two expressions have, this equal to sign 
+     is called the equivalency operator(==).
+     */
      
      public boolean loginUser1(){
        
-      if(username == username2 && password == password2){
+      if(username == username2 && password == password2){ //to make sure that both usernames are the same and that both passwords are the same
           System.out.println("Welcome ,it is great to see you again.");
       }else{
           System.out.println("Username or password incorrect, pease try again.");
       }
          return false;
      }
+     
+     /*Reference equivalence
+     Farrel(2023) indicates that the double equal to sign is used to show the equivalence that the two expressions have, this equal to sign 
+     is called the equivalency operator(==).
+     */
       
      public String returnLoginStatus(){
         
@@ -95,7 +113,11 @@ package com.mycompany.registrationandlogin;
     
 }
         
+      /*Reference
+     baeldung.2024.Regular Expressiom for Password Vaidation in Java.(Version 1.0-SNAPSHOT)(Source code)https://www.baeldung.com/java-regex-password-validation (accessed 11 April 2024)
      
+     Farrel,J.2023.Java Programming Tenth Edition.Boston: Cengage
+     */
      
 
      
